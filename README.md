@@ -1,2 +1,5 @@
 # nandha_helper
-Nandha Helper Plugins Boost Your Productivity with Powerful, Time-Saving Features
+
+A simple helper package with utilities for text search, token generation, and random user-agents.
+
+## Installation
