@@ -5,7 +5,7 @@ import uuid
 import string
 import json
 
-with open("./src/data/User-Agent.txt") as file:
+with open("./data/User-Agent.txt") as file:
     useragents = json.load(file)
     
 class nandhaHelper(object):
