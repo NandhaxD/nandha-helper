@@ -1,0 +1,16 @@
+name: Publish to PyPI
+
+on:
+  push:
+    tags:
+      - 'v*' # Trigger on tags starting with 'v'
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+      # ... Steps to:
+      # 1. Check out code
+      # 2. Set up Python
+      # 3. Install dependencies
+      # 4. Build the package
+      # 5. Publish to PyPI (needs your PyPI API token)
