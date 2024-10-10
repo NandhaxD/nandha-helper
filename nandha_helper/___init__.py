@@ -25,7 +25,7 @@ class nandhaHelper(object):
          Response: 
               list or str according to the limit argument
          """
-         def _get_useragent(limit: int =0):
+         def _get_useragent(limit: int = 0):
              if limit > 0:
                  assert limit > 0 and limit < len(useragents)
                  return random.sample(useragents, limit)
