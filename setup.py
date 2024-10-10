@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='nandha-helper',  # Replace with your actual package name
+    name='nandha_helper',  # Replace with your actual package name
     version='0.1.0',
     packages=find_packages(),
     description='A simple package with one class',
@@ -9,7 +9,7 @@ setup(
     long_description_content_type='text/markdown', 
     author='Nandhagopal K',
     author_email='nandhaxd@gmail.com',
-    url='https://github.com/yourusername/your_package_name',  # Replace with your project URL
+    url='https://github.com/nandhaxd/nandha_helper',  # Replace with your project URL
     license='MIT',
     install_requires=[],  # List any dependencies your package needs
     classifiers=[
