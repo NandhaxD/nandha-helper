@@ -1,5 +1,9 @@
 import random
 import json
+import re
+import io
+import uuid
+import string
 
 
 with open("./nandha_helper/data/User-Agent.txt") as file:
@@ -14,7 +18,24 @@ class nandhaHelper(object):
           self.channel = "@NandhaBots"
 
 
-     
+
+     def search_text(pattern: str, text: str, ignore_case: bool = False):
+           return bool(re.search(pattern, text, re.IGNORECASE)) if ignore_case else bool(re.search(pattern, text))
+
+     def match_text(pattern: str, text: str, ignore_case: bool = False):
+           return bool(re.match(pattern, text, re.IGNORECASE)) if ignore_case else bool(re.match(pattern, text))
+
+     def get_as_document(text_string: str, file_name: str = None, ext: str = "txt"):
+           filename = f"{file_name if file_name else uuid.uuid4()}.{ext}"
+           file = io.BytesIO(str.encode(text_string))
+           file.name = filename
+           return file
+
+     def get_token(length: int = 10) -> str:
+         letters = string.ascii_uppercase + string.ascii_lowercase
+         token = "".join(random.choice(letters) for _ in range(length)) 
+         return token
+          
      @property
      def get_useragent(self) -> [str , list]:
          """
